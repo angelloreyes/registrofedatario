@@ -8,9 +8,9 @@
                     </li>
 
                     <li class="blue-dirty">
-                        <a href="..\NuevoTicket\">
+                        <a href="..\NuevoRegistro\">
                             <span class="glyphicon glyphicon-th"></span>
-                            <span class="lbl">Nuevo Ticket</span>
+                            <span class="lbl">Nuevo Registro</span>
                         </a>
                     </li>
 
@@ -21,9 +21,9 @@
                         </a>
                     </li>
                     <li class="blue-dirty">
-                        <a href="..\ConsultarTicket\">
+                        <a href="..\ConsultarRegistro\">
                             <span class="glyphicon glyphicon-th"></span>
-                            <span class="lbl">Consultar Ticket</span>
+                            <span class="lbl">Consultar Registros</span>
                         </a>
                     </li>
                 </ul>

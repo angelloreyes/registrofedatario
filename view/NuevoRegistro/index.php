@@ -36,73 +36,73 @@
 				<p>
 					Desde esta ventana se realizaran los registros de los documentos fedatarios:
 				</p>
-			<form>
+			<form method="POST" id="registro_form">
+				<input type="hidden" id="usu_id" name="usu_id" value="<?php echo $_SESSION["usu_id"] ?>">
 				<div class="row">
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="ini_fe">Iniciales de Fedatario:</label>
-							<input type="text" class="form-control" id="ini_fe" placeholder="">
+							<label class="form-label semibold" for="r_ini">Iniciales de Fedatario:</label>
+							<input type="text" class="form-control" id="r_ini" name="r_ini" placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="tipo_re">Tipo de registro:</label>
-							<select id="tipo_re" class="form-control">
-								<option>AD</option>
-								<option>CF</option>
+							<label class="form-label semibold" for="tipo_id">Tipo de registro:</label>
+							<select id="tipo_id" name="tipo_id" class="form-control">
+								
 							</select>
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="fecha1">Fecha:</label>
-							<input type="date" class="form-control" id="fecha1" placeholder="">
+							<label class="form-label semibold" for="r_fecha">Fecha:</label>
+							<input type="date" class="form-control" id="r_fecha" name="r_fecha" placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="identi">Identificación:</label>
-							<input type="text" class="form-control" id="identi" placeholder="">
+							<label class="form-label semibold" for="r_iden">Identificación:</label>
+							<input type="text" class="form-control" id="r_iden" name="r_iden" placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="n_folios">Número de Folios:</label>
-							<input type="text" class="form-control" id="n_folios" placeholder="">
+							<label class="form-label semibold" for="r_foli">Número de Folios:</label>
+							<input type="text" class="form-control" id="r_foli" name="r_foli"placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="identi_tra">Identificación del procedimiento o trámite:</label>
-							<input type="text" class="form-control" id="identi_tra" placeholder="">
+							<label class="form-label semibold" for="r_iden_trami">Identificación del procedimiento o trámite:</label>
+							<input type="text" class="form-control" id="r_iden_trami" name="r_iden_trami" placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="orga_area">Órgano o Área de entrega:</label>
-							<input type="text" class="form-control" id="orga_area" placeholder="">
+							<label class="form-label semibold" for="r_organo">Órgano o Área de entrega:</label>
+							<input type="text" class="form-control" id="r_organo" name="r_organo" placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="nom_usu_auten">Nombre del usuario que solicita autenticidad:</label>
-							<input type="text" class="form-control" id="nom_usu_auten" placeholder="">
+							<label class="form-label semibold" for="r_nom_soli">Nombre del usuario que solicita autenticidad:</label>
+							<input type="text" class="form-control" id="r_nom_soli" name="r_nom_soli" placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="dni_pasa">N° DNI , Pasaporte o Carnét de extranjeria:</label>
-							<input type="text" class="form-control" id="dni_pasa" placeholder="">
+							<label class="form-label semibold" for="r_dni">N° DNI , Pasaporte o Carnét de extranjeria:</label>
+							<input type="text" class="form-control" id="r_dni" name="r_dni" placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4">
 						<fieldset class="form-group">
-							<label class="form-label semibold" for="fech_con">Fecha de Conclusión:</label>
-							<input type="date" class="form-control" id="fech_con" placeholder="">
+							<label class="form-label semibold" for="r_fech_eclu">Fecha de Conclusión:</label>
+							<input type="date" class="form-control" id="r_fech_eclu" name="r_fech_eclu" placeholder="">
 						</fieldset>
 					</div>
 					<div class="col-lg-12">
-					<button type="button" class="btn btn-rounded btn-inline btn-primary">Registrar</button>
+					<button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-primary">Registrar</button>
 					</div>
 				</div>
 				</form>
@@ -111,7 +111,7 @@
 		</div><!--.container-fluid-->
 	</div><!--.page-content-->
 	<?php require_once("../MainJs/js.php");?>
-	<script type="text/javascript" src="nuevoticket.js"></script>
+	<script type="text/javascript" src="nuevoregistro.js"></script>
 </body>
 </html>
 <?php
