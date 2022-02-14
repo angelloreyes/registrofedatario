@@ -18,7 +18,10 @@ if (isset($_SESSION["usu_id"])) {
 		<!-- Contenido -->
 		<div class="page-content">
 			<div class="container-fluid">
+				
 				<header class="section-header">
+		
+                    
 					<div class="tbl">
 						<div class="tbl-row">
 							<div class="tbl-cell">
@@ -27,7 +30,12 @@ if (isset($_SESSION["usu_id"])) {
 									<li><a href="#">Home</a></li>
 									<li class="active">Listado de Registro de Documentos Fedateados</li>
 								</ol>
+								
 							</div>
+							
+                            <button type="button" class="btn btn-alt-primary" id="btnnuevo">
+                                Nuevo <i class="fa fa-newspaper-o ml-5"></i>
+                            </button>
 						</div>
 					</div>
 				</header>
@@ -55,10 +63,95 @@ if (isset($_SESSION["usu_id"])) {
 					</table>
 				</div>
 			</div>
+			<div id="modalcrud" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <form method="post" id="menu_form">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="titulo_crud">Editar Registro</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                <div class="modal-body">
+					<div class="row">
+					<input type="hidden" id="r_id" name="r_id">
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_ini">Iniciales de Fedatario:</label>
+							<input type="text" class="form-control" id="r_ini" name="r_ini" >
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="tipo_id">Tipo de registro:</label>
+							<select id="tipo_id" name="tipo_id" class="form-control" >
+								
+							</select>
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_fecha">Fecha:</label>
+							<input type="date" class="form-control" id="r_fecha" name="r_fecha" >
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_iden">Identificación:</label>
+							<input type="text" class="form-control" id="r_iden" name="r_iden" >
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_foli">Número de Folios:</label>
+							<input type="text" class="form-control" id="r_foli" name="r_foli" >
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_iden_trami">Identificación del procedimiento o trámite:</label>
+							<input type="text" class="form-control" id="r_iden_trami" name="r_iden_trami" >
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_organo">Órgano o Área de entrega:</label>
+							<input type="text" class="form-control" id="r_organo" name="r_organo" >
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_nom_soli">Nombre del usuario que solicita autenticidad:</label>
+							<input type="text" class="form-control" id="r_nom_soli" name="r_nom_soli" >
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_dni">N° DNI , Pasaporte o Carnét de extranjeria:</label>
+							<input type="text" class="form-control" id="r_dni" name="r_dni" >
+						</fieldset>
+					</div>
+					<div class="col-lg-4">
+						<fieldset class="form-group">
+							<label class="form-label semibold" for="r_fech_eclu">Fecha de Conclusión:</label>
+							<input type="date" class="form-control" id="r_fech_eclu" name="r_fech_eclu" >
+						</fieldset>
+					</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="action" id="#" value="add" class="btn btn-primary">Guardar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+
 			<!--.container-fluid-->
 		</div>
 		<!--.page-content-->
-		<?php require_once("../MainJs/js.php"); ?>
+		<?php require_once("../MainJs/js.php");?>
 		<script type="text/javascript" src="consultarregistro.js"></script>
 	</body>
 

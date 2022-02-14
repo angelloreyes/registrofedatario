@@ -28,6 +28,7 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
         <div class="page-center-in">
             <div class="container-fluid">
                 <form class="sign-box" action="" method="POST" id="login_form">
+                    
                     <div class="sign-avatar">
                         <img src="public/img/avatar-sign.png" alt="">
                     </div>
