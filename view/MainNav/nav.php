@@ -10,9 +10,9 @@
             </a>
         </li>
         <li class="blue-dirty">
-            <a href="..\MntUsuario\">
+            <a href="..\MantenimientoUsuario\">
                 <span class="glyphicon glyphicon-th"></span>
-                <span class="lbl">Mantenimiento Usuario</span>
+                <span class="lbl">Usuarios</span>
             </a>
         </li>
         <li class="blue-dirty">

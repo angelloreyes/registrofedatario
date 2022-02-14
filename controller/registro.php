@@ -20,7 +20,7 @@
             foreach($datos as $row){
                 $sub_array = array();
                 $fecha = date("Y",strtotime($row["r_fecha"]));
-                $correla=sprintf("%'.05d", $row["r_id"]);
+                $correla=sprintf("%'.04d", $row["r_id"]);
                 $sub_array[] = $correla."-".$fecha."-".$row["r_ini"];
                 $sub_array[] = $row["tipo_nom"];
                 $sub_array[] = $row["r_fecha"];

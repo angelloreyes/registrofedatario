@@ -40,20 +40,20 @@ if (isset($_SESSION["usu_id"])) {
 					</div>
 				</header>
 				<div class="box-typical box-typical-padding">
-					<table id="registro_data"  class="table table-bordered table-striped table-vcenter js-dataTable-full">
+					<table id="registro_data"  class="table table-striped table-bordered nowrap" style="width:100%">
 						<thead>
 							<tr>
-								<th style="width: 10%;text-align: center;">Número de Registro</th>
-								<th style="width: 10%;text-align: center;">Tipo de Registro</th>
-								<th class="d-none d-sm-table-cell" style="width: 5%;text-align: center;">Fecha</th>
-								<th class="d-none d-sm-table-cell" style="width: 20%;text-align: center;">Identificación</th>
-								<th class="text-center" style="width: 5%;text-align: center;">Número de Folios</th>
-								<th class="text-center" style="width: 10%;text-align: center;">Identificación del Procedimiento o Trámite</th>
-								<th class="text-center" style="width: 10%;text-align: center;">Órgano o Área de entrega</th>
-								<th class="text-center" style="width: 10%;text-align: center;">Nombre del usuario que solicita autenticidad</th>
-								<th class="text-center" style="width: 5%;text-align: center;">N°DNI,pasaporte o  Carnét de extranjeria</th>
-								<th class="text-center" style="width: 5%;text-align: center;">Fecha de Conclusion</th>
-								<th class="text-center" style="width: 5%;text-align: center;">Editar</th>
+								<th style="text-align: center;">Número de Registro</th>
+								<th style="text-align: center;">Tipo de Registro</th>
+								<th class="d-none d-sm-table-cell" style="text-align: center;">Fecha</th>
+								<th class="d-none d-sm-table-cell" style="text-align: center;">Identificación</th>
+								<th class="text-center" style="text-align: center;">Número de Folios</th>
+								<th class="text-center" style="text-align: center;">Identificación del Procedimiento o Trámite</th>
+								<th class="text-center" style="text-align: center;">Órgano o Área de entrega</th>
+								<th class="text-center" style="text-align: center;">Nombre del usuario que solicita autenticidad</th>
+								<th class="text-center" style="text-align: center;">N°DNI,pasaporte o  Carnét de extranjeria</th>
+								<th class="text-center" style="text-align: center;">Fecha de Conclusion</th>
+								<th class="text-center" style="text-align: center;">Editar</th>
 
 							</tr>
 						</thead>
