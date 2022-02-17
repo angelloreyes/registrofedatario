@@ -23,9 +23,7 @@ $(document).ready(function(){
         colReorder: true,
         buttons: [		          
                 'copyHtml5',
-                'excelHtml5',
-                'csvHtml5',
-                'pdfHtml5'
+                'excelHtml5'
                 ],
         "ajax":{
             url: '../../controller/registro.php?op=listar',

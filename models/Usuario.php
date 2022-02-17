@@ -78,7 +78,7 @@
         public function delete_usuario($usu_id){
             $conectar=parent::Conexion();
             parent::set_names();
-            $sql="UPDATE tm_usuario SET est='0' WHERE usu_id=?";
+            $sql="UPDATE tm_usuario SET est='0', fech_elim=now() WHERE usu_id=?";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1,$usu_id);
             $sql->execute();

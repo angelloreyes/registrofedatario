@@ -17,7 +17,7 @@
                 return $this->dbh->query("SET NAMES 'utf8'");
             }
             public static function ruta(){
-                return "http://localhost/registrofedatarios/";
+                return "http://10.70.0.87/registrofedatarios/";
             }
 
         }
