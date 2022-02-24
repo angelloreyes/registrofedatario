@@ -28,9 +28,9 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="rol_id">Rol</label>
-                        <select class="select2" id="rol_id" name="rol_id">
-                            <option value="1">Usuario</option>
-                            <option value="2">Soporte</option>
+                        <select class="form-control" id="rol_id" name="rol_id">
+                            <option value="1">Administrador</option>
+                            <option value="2">Usuario</option>
                         </select>
                     </div>
                 </div>

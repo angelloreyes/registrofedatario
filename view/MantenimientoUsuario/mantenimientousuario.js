@@ -1,11 +1,28 @@
 var tabla;
 
 function init(){
-    $("#menu_form").on("submit",function(e){	
+    $("#usuario_form").on("submit",function(e){	
         guardaryeditar(e);	
     });
 }
-
+function guardaryeditar(e){
+    e.preventDefault();
+    var formData = new FormData($("#usuario_form")[0]);
+    $.ajax({
+        url:"../../controller/usuario.php?op=guardaryeditar",
+        type: "POST",
+        data: formData,
+        contentType:false,
+        processData:false,
+        success:function(datos){
+            console.log(datos);
+            $('#usuario_form')[0].reset();
+            $("#modalnuevo").modal('hide');
+            $('#usuario_data').DataTable().ajax.reload();	
+           swal("Correcto!","Registrado Correctamente:","success");
+        }
+    });
+}
 $(document).ready(function(){
     tabla=$('#usuario_data').dataTable({
         "aProcessing": true,
@@ -61,6 +78,15 @@ $(document).ready(function(){
 
 function editar(usu_id){
     $('#mdtitulo').html('Editar Registro');
+    $.post("../../controller/usuario.php?op=mostrar", {usu_id : usu_id }, function (data) {
+        data = JSON.parse(data);
+        $('#usu_id').val(data.usu_id);
+        $('#usu_nom').val(data.usu_nom);
+        $('#usu_ape').val(data.usu_ape);
+        $('#usu_correo').val(data.usu_correo);
+        $('#usu_pass').val(data.usu_pass);
+        $('#rol_id').val(data.rol_id).trigger('change');
+    });
     $('#modalnuevo').modal('show');
 }
 function eliminar(usu_id){
@@ -91,47 +117,9 @@ function eliminar(usu_id){
         }
     });
 }
-
-function editara(r_id) {
-    $.post("../../controller/registro.php?op=mostrar",{r_id : r_id}, function(data, status){
-        data = JSON.parse(data);
-        $('#titulo_crud').html('Editar Registro');
-        $('#r_ini').val(data.r_ini);
-        $('#tipo_id').val(data.tipo_id);
-        $('#r_fecha').val(data.r_fecha);
-        $('#r_iden').val(data.r_iden);
-        $('#r_foli').val(data.r_foli);
-        $('#r_iden_trami').val(data.r_iden_trami);
-        $('#r_organo').val(data.r_organo);
-        $('#r_nom_soli').val(data.r_nom_soli);
-        $('#r_dni').val(data.r_dni);
-        $('#r_fech_eclu').val(data.r_fech_eclu);
-        $('#r_id').val(data.r_id);
-    }); 
-    $("#modalcrud").modal('show');
-    
-}
-
-function guardaryeditar(e){
-    e.preventDefault();
-    var formData = new FormData($("#menu_form")[0]);
-    $.ajax({
-        url:"../../controller/registro.php?op=guardaryeditar",
-        type: "POST",
-        data: formData,
-        contentType:false,
-        processData:false,
-        success:function(datos){
-            console.log(datos);
-            $('#menu_form')[0].reset();
-            $("#modalcrud").modal('hide');
-            $('#registro_data').DataTable().ajax.reload();	
-           swal("Correcto!","Registrado Correctamente:","success");
-        }
-    });
-}
 $(document).on("click","#btnnuevo",function(){
     $('#mdtitulo').html('Nuevo Registro');
+    $('#usuario_form')[0].reset();
     $('#modalnuevo').modal('show');
 });
 init();

@@ -4,12 +4,6 @@
         <ul class="side-menu-list">
         <nav class="side-menu">
         <li class="blue-dirty">
-            <a href="..\Home\">
-                <span class="glyphicon glyphicon-th"></span>
-                <span class="lbl">Inicio</span>
-            </a>
-        </li>
-        <li class="blue-dirty">
             <a href="..\MantenimientoUsuario\">
                 <span class="glyphicon glyphicon-th"></span>
                 <span class="lbl">Usuarios</span>
@@ -28,12 +22,6 @@
         ?>
         <ul class="side-menu-list">
         <nav class="side-menu">
-        <li class="blue-dirty">
-            <a href="..\Home\">
-                <span class="glyphicon glyphicon-th"></span>
-                <span class="lbl">Inicio</span>
-            </a>
-        </li>
         <li class="blue-dirty">
             <a href="..\ConsultarRegistro\">
                 <span class="glyphicon glyphicon-th"></span>
