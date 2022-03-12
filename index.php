@@ -75,9 +75,6 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
                             <input type="checkbox" id="signed-in" />
                             <label for="signed-in">Recordar</label>
                         </div>
-                        <div class="float-right reset">
-                            <a href="reset-password.html">Cambiar Contraseña</a>
-                        </div>
                     </div>
                     <input type="hidden" name="enviar" class="form-control" value="si">
                     <button type="submit" class="btn btn-rounded">Acceder</button>

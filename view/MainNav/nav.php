@@ -10,9 +10,15 @@
             </a>
         </li>
         <li class="blue-dirty">
+            <a href="..\RegistrodeFedatario\">
+                <span class="glyphicon glyphicon-th"></span>
+                <span class="lbl">Registro de Fedatarios</span>
+            </a>
+        </li>
+        <li class="blue-dirty">
             <a href="..\ConsultarRegistro\">
                 <span class="glyphicon glyphicon-th"></span>
-                <span class="lbl">Consultar Registros</span>
+                <span class="lbl">Registro de Documentos</span>
             </a>
         </li>
     </ul>
@@ -25,7 +31,7 @@
         <li class="blue-dirty">
             <a href="..\ConsultarRegistro\">
                 <span class="glyphicon glyphicon-th"></span>
-                <span class="lbl">Consultar Registros</span>
+                <span class="lbl">Registro de Documentos</span>
             </a>
         </li>
     </ul>

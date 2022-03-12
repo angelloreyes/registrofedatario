@@ -109,7 +109,7 @@ function eliminar(usu_id){
         $('#usuario_data').DataTable().ajax.reload();
 
             swal({
-                title: "HelpDesk!",
+                title: "Registro de Fedatario!",
                 text: "Usuario eliminado correctamente.",
                 type: "success",
                 confirmButtonClass: "btn-success"

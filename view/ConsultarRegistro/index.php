@@ -25,10 +25,10 @@ if (isset($_SESSION["usu_id"])) {
 					<div class="tbl">
 						<div class="tbl-row">
 							<div class="tbl-cell">
-								<h3>Listado de Registro de Documentos Fedateados</h3>
+								<h3>Registro de Documentos Fedateados</h3>
 								<ol class="breadcrumb breadcrumb-simple">
 									<li><a href="#">Home</a></li>
-									<li class="active">Listado de Registro de Documentos Fedateados</li>
+									<li class="active">Registro de Documentos Fedateados</li>
 								</ol>
 								
 							</div>
